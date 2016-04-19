@@ -1,0 +1,52 @@
+ASSIGNMENT:  	Changes in dominions.c file
+AUTHOR NAME:	Jiongcheng Luo
+DATE:		4/18/16
+
+
+
+#1->changed from case "adventurer" card:
+
+1) Added function "card_adventurer(...){...}" with type that returns "int".
+2) Made 5 parameters that relatively correspond to "gameState *state", "currentPlayer", "drawntreasure", "cardDrawn", "z" and the array of "temphand" (as a pointer).
+3) In cardEffect() function, "case adventurer:" in switch statement calls "card_adventurer(...){...}".
+
+
+#2->changed from case "council_room" card:
+
+1) Added function "card_council_room(...){...}" with type that returns "int".
+2) Made 3 parameters that relatively correspond to "gameState *state", "currentPlayer" and "handPos").
+3) Internally added "int i" value for loop counter
+4) In cardEffect() function, "case council_room:" in switch statement calls "card_council_room(...){...}".
+
+
+#3->changed from case "remodel" card:
+
+1) Added function "card_remodel(...){...}" with type that returns "int".
+2) Made 5 parameters that relatively correspond to "gameState *state", "currentPlayer", "choice1", "choice2" and "handPos").
+3) Internally added "int i" value for loop counter and "int j" value for temperary variable
+4) In cardEffect() function, "case remodel:" in switch statement calls "card_remodel(...){...}".
+
+
+#4->changed from case "smithy" card:
+
+1) Added function "card_smithy(...){...}" with type that returns "int".
+2) Made 3 parameters that relatively correspond to "gameState *state", "currentPlayer" and "handPos").
+3) Internally added "int i" value for loop counter
+4) In cardEffect() function, "case smithy:" in switch statement calls "card_smithy(...){...}".
+
+
+#5->changed from case "village" card:
+
+1) Added function "card_village(...){...}" with type that returns "int".
+2) Made 3 parameters that relatively correspond to "gameState *state", "currentPlayer" and "handPos").
+3) In cardEffect() function, "case village:" in switch statement calls "card_village(...){...}".
+
+
+
+
+
+
+
+
+
+
