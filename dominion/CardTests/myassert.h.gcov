@@ -1,0 +1,22 @@
+        -:    0:Source:../myassert.h
+        -:    0:Graph:cardtest4.gcno
+        -:    0:Data:cardtest4.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <stdlib.h>
+        -:    2:#include <stdio.h>
+        -:    3:#include <time.h>
+        -:    4:
+        6:    5:void check_functions(int func){
+        6:    6:	if(!(func == 1 || func == 0)){
+    #####:    7:		printf("TEST FAILED: Function Crashed for Returning '-1'\n");
+    #####:    8:		exit(0);
+        -:    9:	}
+        6:   10:}
+        -:   11:
+        3:   12:void check_equal(int a, int b){
+        3:   13:	if(a != b){
+    #####:   14:		printf("TEST FAILED: Parameters not equal\n");
+    #####:   15:		exit(0);
+        -:   16:	}
+        3:   17:}

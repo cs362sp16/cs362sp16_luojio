@@ -1,0 +1,40 @@
+        -:    0:Source:unittest4.c
+        -:    0:Graph:unittest4.gcno
+        -:    0:Data:unittest4.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../dominion.c"
+        -:    2:#include "../rngs.c"
+        -:    3:#include "../myassert.h"
+        -:    4:
+        -:    5:/*************************************
+        -:    6:Test for "numHandCards()" function
+        -:    7:*************************************/
+        -:    8:
+        1:    9:int main(){
+        -:   10:
+        -:   11://	Test Initialization
+        -:   12:	int i, temp1,temp2;
+        1:   13:	srand (time(NULL));
+        -:   14:	struct gameState game;
+        1:   15:	int cards[10] = {estate, duchy, adventurer, embargo, sea_hag, feast, gardens, mine, tribute, outpost}; 
+        1:   16:	int playerNum = 4;
+        1:   17:	int theplayer = 2;
+        -:   18:
+        -:   19:// Random settings
+        1:   20:	int ramdomSeed = rand() % 99999 + 1;	
+        1:   21:	int bonus = rand() % 10;
+        1:   22:	int handNum = rand() % MAX_HAND;
+        -:   23:	//initializeGame(playerNum, cards, ramdomSeed, &game);
+        -:   24:
+        1:   25:	check_functions(initializeGame(playerNum, cards, ramdomSeed, &game));
+        -:   26:
+        -:   27:	// should equal since drawCard from player
+        1:   28:	temp1 = numHandCards(&game);
+        1:   29:	drawCard(game.whoseTurn, &game);
+        1:   30:	check_equal(temp1, numHandCards(&game)-1);
+        -:   31:
+        -:   32:
+        1:   33:	printf("TEST SUCCESSFULLY COMPLETED\n");
+        1:   34:	return 0;
+        -:   35:}

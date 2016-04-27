@@ -1,0 +1,45 @@
+        -:    0:Source:cardtest1.c
+        -:    0:Graph:cardtest1.gcno
+        -:    0:Data:cardtest1.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../dominion.c"
+        -:    2:#include "../rngs.c"
+        -:    3:#include "../myassert.h"
+        -:    4:
+        -:    5:/*************************************
+        -:    6:Test for "smithy" card
+        -:    7:*************************************/
+        -:    8:
+        1:    9:int main(){
+        -:   10:
+        -:   11://	Test Initialization
+        -:   12:	int i, temp1, temp2, temp3, temp4;
+        1:   13:	srand (time(NULL));
+        -:   14:	struct gameState game;
+        1:   15:	int cards[10] = {estate, duchy, adventurer, embargo, sea_hag, feast, gardens, mine, tribute, outpost}; 
+        1:   16:	int playerNum = 4;
+        -:   17:	
+        -:   18:
+        -:   19:// Random settings
+        1:   20:	int ramdomSeed = rand() % 99999 + 1;	
+        1:   21:	int bonus = rand() % 10;
+        1:   22:	int handNum = rand() % MAX_HAND;
+        -:   23:
+        1:   24:	check_functions(initializeGame(playerNum, cards, ramdomSeed, &game));
+        1:   25:	int theplayer = whoseTurn(&game);
+        -:   26:
+        -:   27:
+        -:   28:	// check card effect is to add 3 cards to current player but discard 1 card
+        1:   29:	temp1 = game.handCount[theplayer];
+        1:   30:	temp3 = game.deckCount[theplayer];
+        -:   31:
+        1:   32:	check_functions(cardEffect(smithy, 0, 0, 0, &game, 0, 0));
+        1:   33:	temp2 = game.handCount[theplayer];
+        1:   34:	temp4 = game.deckCount[theplayer];
+        1:   35:	check_equal(temp1, temp2-3+1);
+        -:   36:
+        -:   37:
+        1:   38:	printf("TEST SUCCESSFULLY COMPLETED\n");
+        1:   39:	return 0;
+        -:   40:}

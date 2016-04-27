@@ -1,0 +1,16 @@
+File 'unittest1.c'
+Lines executed:100.00% of 27
+Creating 'unittest1.c.gcov'
+
+File '../myassert.h'
+Lines executed:60.00% of 10
+Creating 'myassert.h.gcov'
+
+File '../rngs.c'
+Lines executed:57.38% of 61
+Creating 'rngs.c.gcov'
+
+File '../dominion.c'
+Lines executed:16.37% of 556
+Creating 'dominion.c.gcov'
+

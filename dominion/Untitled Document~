@@ -1,0 +1,9 @@
+Unittest1 (updateCoins): TEST SUCCESSFULLY COMPLETED
+Unittest2 (isGameOver): TEST SUCCESSFULLY COMPLETED
+Unittest3 (drawCard): TEST SUCCESSFULLY COMPLETED
+Unittest4 (numHandCards): TEST SUCCESSFULLY COMPLETED
+
+cardtest1 (smithy): TEST SUCCESSFULLY COMPLETED
+cardtest2 (adventurer): program goes into infinit loop but doesn't crash
+cardtest3 (great_hall): TEST SUCCESSFULLY COMPLETED
+cardtest4 (steward): TEST SUCCESSFULLY COMPLETED

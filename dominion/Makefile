@@ -19,3 +19,54 @@ all: playdom player
 
 clean:
 	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM
+
+test_result:
+	$(info --------------------------------------------------------------)
+	$(info FILE:	   unitestresults.out)
+	$(info ASSIGNMENT: CS362 DEBUG ASSIGNMENT 2)
+	$(info AUTHOR:     Jiongcheng Luo)
+	$(info DATE:       4/26/2016)
+	$(info --------------------------------------------------------------)
+
+	gcc -fprofile-arcs -ftest-coverage UnitTests/unittest1.c -lm
+	./a.out
+	gcov unittest1.c
+	rm a.out
+
+	gcc -fprofile-arcs -ftest-coverage UnitTests/unittest2.c -lm
+	./a.out
+	gcov unittest2.c
+	rm a.out
+
+	gcc -fprofile-arcs -ftest-coverage UnitTests/unittest3.c -lm
+	./a.out
+	gcov unittest3.c
+	rm a.out
+
+	gcc -fprofile-arcs -ftest-coverage UnitTests/unittest4.c -lm
+	./a.out
+	gcov unittest4.c
+	rm a.out
+
+	gcc -fprofile-arcs -ftest-coverage CardTests/cardtest1.c -lm
+	./a.out
+	gcov cardtest1.c
+	rm a.out
+
+	gcc -fprofile-arcs -ftest-coverage CardTests/cardtest2.c -lm
+	./a.out
+	gcov cardtest2.c
+	rm a.out
+
+	gcc -fprofile-arcs -ftest-coverage CardTests/cardtest3.c -lm
+	./a.out
+	gcov cardtest3.c
+	rm a.out
+
+	gcc -fprofile-arcs -ftest-coverage CardTests/cardtest4.c -lm
+	./a.out
+	gcov cardtest4.c
+	rm a.out
+
+result:
+	make test_result > unittestresult.out

@@ -1,0 +1,230 @@
+--------------------------------------------------------------
+FILE:	   unitestresults.output
+ASSIGNMENT: CS362 DEBUG ASSIGNMENT 2
+AUTHOR:     Jiongcheng Luo
+DATE:       4/26/2016
+--------------------------------------------------------------
+gcc -fprofile-arcs -ftest-coverage UnitTests/unittest1.c -lm
+./a.out
+
+*********************************************************
+
+                      Unit Test 1
+
+*********************************************************
+Function 'updateCoins()': TEST SUCCESSFULLY COMPLETED
+
+gcov unittest1.c
+File 'UnitTests/unittest1.c'
+Lines executed:100.00% of 30
+Creating 'unittest1.c.gcov'
+
+File 'myassert.h'
+Lines executed:60.00% of 10
+Creating 'myassert.h.gcov'
+
+File 'rngs.c'
+Lines executed:57.38% of 61
+Creating 'rngs.c.gcov'
+
+File 'dominion.c'
+Lines executed:16.34% of 557
+Creating 'dominion.c.gcov'
+
+rm a.out
+gcc -fprofile-arcs -ftest-coverage UnitTests/unittest2.c -lm
+./a.out
+
+*********************************************************
+
+                      Unit Test 2
+
+*********************************************************
+Function 'isGameOver()': TEST SUCCESSFULLY COMPLETED
+
+gcov unittest2.c
+File 'UnitTests/unittest2.c'
+Lines executed:100.00% of 32
+Creating 'unittest2.c.gcov'
+
+File 'myassert.h'
+Lines executed:60.00% of 10
+Creating 'myassert.h.gcov'
+
+File 'rngs.c'
+Lines executed:57.38% of 61
+Creating 'rngs.c.gcov'
+
+File 'dominion.c'
+Lines executed:17.77% of 557
+Creating 'dominion.c.gcov'
+
+rm a.out
+gcc -fprofile-arcs -ftest-coverage UnitTests/unittest3.c -lm
+./a.out
+
+*********************************************************
+
+                      Unit Test 3
+
+*********************************************************
+Function 'drawCard()': TEST SUCCESSFULLY COMPLETED
+
+gcov unittest3.c
+File 'UnitTests/unittest3.c'
+Lines executed:100.00% of 25
+Creating 'unittest3.c.gcov'
+
+File 'myassert.h'
+Lines executed:60.00% of 10
+Creating 'myassert.h.gcov'
+
+File 'rngs.c'
+Lines executed:57.38% of 61
+Creating 'rngs.c.gcov'
+
+File 'dominion.c'
+Lines executed:15.98% of 557
+Creating 'dominion.c.gcov'
+
+rm a.out
+gcc -fprofile-arcs -ftest-coverage UnitTests/unittest4.c -lm
+./a.out
+
+*********************************************************
+
+                      Unit Test 4
+
+*********************************************************
+Function 'numHandCards()': TEST SUCCESSFULLY COMPLETED
+
+gcov unittest4.c
+File 'UnitTests/unittest4.c'
+Lines executed:100.00% of 17
+Creating 'unittest4.c.gcov'
+
+File 'myassert.h'
+Lines executed:60.00% of 10
+Creating 'myassert.h.gcov'
+
+File 'rngs.c'
+Lines executed:57.38% of 61
+Creating 'rngs.c.gcov'
+
+File 'dominion.c'
+Lines executed:16.70% of 557
+Creating 'dominion.c.gcov'
+
+rm a.out
+gcc -fprofile-arcs -ftest-coverage CardTests/cardtest1.c -lm
+./a.out
+
+*********************************************************
+
+                      Card Test 1
+
+*********************************************************
+Card 'smithy': TEST SUCCESSFULLY COMPLETED
+
+gcov cardtest1.c
+File 'CardTests/cardtest1.c'
+Lines executed:100.00% of 20
+Creating 'cardtest1.c.gcov'
+
+File 'myassert.h'
+Lines executed:60.00% of 10
+Creating 'myassert.h.gcov'
+
+File 'rngs.c'
+Lines executed:57.38% of 61
+Creating 'rngs.c.gcov'
+
+File 'dominion.c'
+Lines executed:24.96% of 557
+Creating 'dominion.c.gcov'
+
+rm a.out
+gcc -fprofile-arcs -ftest-coverage CardTests/cardtest2.c -lm
+./a.out
+
+*********************************************************
+
+                      Card Test 2
+
+*********************************************************
+TEST FAILED: Parameters not equal
+
+gcov cardtest2.c
+File 'CardTests/cardtest2.c'
+Lines executed:90.48% of 21
+Creating 'cardtest2.c.gcov'
+
+File 'myassert.h'
+Lines executed:80.00% of 10
+Creating 'myassert.h.gcov'
+
+File 'rngs.c'
+Lines executed:57.38% of 61
+Creating 'rngs.c.gcov'
+
+File 'dominion.c'
+Lines executed:31.96% of 557
+Creating 'dominion.c.gcov'
+
+rm a.out
+gcc -fprofile-arcs -ftest-coverage CardTests/cardtest3.c -lm
+./a.out
+
+*********************************************************
+
+                      Card Test 3
+
+*********************************************************
+Card 'great_hall': TEST SUCCESSFULLY COMPLETED
+
+gcov cardtest3.c
+File 'CardTests/cardtest3.c'
+Lines executed:100.00% of 18
+Creating 'cardtest3.c.gcov'
+
+File 'myassert.h'
+Lines executed:60.00% of 10
+Creating 'myassert.h.gcov'
+
+File 'rngs.c'
+Lines executed:57.38% of 61
+Creating 'rngs.c.gcov'
+
+File 'dominion.c'
+Lines executed:20.47% of 557
+Creating 'dominion.c.gcov'
+
+rm a.out
+gcc -fprofile-arcs -ftest-coverage CardTests/cardtest4.c -lm
+./a.out
+
+*********************************************************
+
+                      Card Test 4
+
+*********************************************************
+Card 'steward': TEST SUCCESSFULLY COMPLETED
+
+gcov cardtest4.c
+File 'CardTests/cardtest4.c'
+Lines executed:100.00% of 30
+Creating 'cardtest4.c.gcov'
+
+File 'myassert.h'
+Lines executed:60.00% of 10
+Creating 'myassert.h.gcov'
+
+File 'rngs.c'
+Lines executed:57.38% of 61
+Creating 'rngs.c.gcov'
+
+File 'dominion.c'
+Lines executed:21.36% of 557
+Creating 'dominion.c.gcov'
+
+rm a.out
