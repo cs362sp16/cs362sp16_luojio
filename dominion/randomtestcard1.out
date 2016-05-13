@@ -89,7 +89,7 @@ No calls
 Function 'cardEffect'
 Lines executed:8.96% of 201
 Branches executed:16.76% of 173
-Taken at least once:4.05% of 173
+Taken at least once:3.47% of 173
 Calls executed:10.91% of 55
 
 Function 'card_village'
@@ -247,7 +247,7 @@ Creating 'rngs.c.gcov'
 File 'dominion.c'
 Lines executed:28.90% of 557
 Branches executed:27.58% of 417
-Taken at least once:18.94% of 417
+Taken at least once:18.71% of 417
 Calls executed:19.15% of 94
 Creating 'dominion.c.gcov'
 

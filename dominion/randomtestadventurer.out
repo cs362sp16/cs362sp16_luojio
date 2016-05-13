@@ -87,7 +87,7 @@ Taken at least once:50.00% of 6
 No calls
 
 Function 'cardEffect'
-Lines executed:11.94% of 201
+Lines executed:12.44% of 201
 Branches executed:19.08% of 173
 Taken at least once:5.78% of 173
 Calls executed:12.73% of 55
@@ -118,7 +118,7 @@ Calls executed:100.00% of 3
 Function 'card_adventurer'
 Lines executed:93.33% of 15
 Branches executed:100.00% of 12
-Taken at least once:66.67% of 12
+Taken at least once:75.00% of 12
 Calls executed:50.00% of 2
 
 Function 'getCost'
@@ -245,9 +245,9 @@ Calls executed:18.75% of 16
 Creating 'rngs.c.gcov'
 
 File 'dominion.c'
-Lines executed:28.90% of 557
+Lines executed:29.08% of 557
 Branches executed:37.65% of 417
-Taken at least once:20.14% of 417
+Taken at least once:20.38% of 417
 Calls executed:19.15% of 94
 Creating 'dominion.c.gcov'
 
