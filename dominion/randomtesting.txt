@@ -1,0 +1,31 @@
+
+FILE: 	randomtesting.txt
+AUTHOR: Jiongcheng Luo
+Date:	5/13/16
+
+
+---Test Development:
+The principle method I used for my random testing cards was to generate random/varied inputs (e.g. PlayerNumber, RandomSeeds, deckCount and handCout). These random inputs  would generate a arbitrary game state that is different from others by each time I loop over (The Maximum loop time can be varied). After a game state was generated, and by knowing the card effect of the specifi card, I can implement the test by checking:
+
+	1) Does the card effect function run successfully (check for syntax error)?
+	2) Does the card effect work as expected (check for logic error )
+	3) Does the inputs have corresponding outputs (check for correct function implementation) ?
+
+In order to improving the the coverage testing, I used gcov -f -b for checking coverage which “-f” allows me to output summaries for each function in addition to the file level summary, and “-b” allows me to see how often each branch in your program was taken, these coverage checks help the coverage summary be more specific.
+
+
+---Test Results:
+I managed to coverage more than 90% for card adventurer and the other two cards (smithy & steward), my coverage results show “Branches executed:100.00%” for all three cards, which means all the branches are covered in the test. However, there were some codes failed in the card adventurer since it reported “TEST FAILED: Parameters not equal”. In my testing cases, it took about 30 second to 1 minutes to run the entire program. Document for card adventurer shows 100% statement and coverage:
+
+	File 'RandomTests/randomtestadventurer.c'
+	Lines executed:81.58% of 38
+	Branches executed:100.00% of 10
+	Taken at least once:80.00% of 10
+	Calls executed:86.36% of 22
+
+
+---Compare With Unit Tests:
+According to the testing and coverage results from unit tests and random tests, the ability of detect programs' faults are similar to each other between unit and random tests, but random tests have higher coverage. Unit tests can be more deeply detecting program errors since it can focus on a particular scope of a function or the entire program. However, random testing covers more testing cases  than unit tests for simple programs since it can loop over to check for different arbitrary inputs.
+
+Based on the coverage result, random tests had higher coverage in this case, because all the card functions are simple and short in this test program, therefore the random tests would be more powerful to detect any errors and bugs.
+

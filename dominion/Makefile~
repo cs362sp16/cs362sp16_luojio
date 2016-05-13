@@ -18,10 +18,7 @@ player: player.c interface.o
 all: playdom player
 
 clean:
-	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 randomtestadventurer randomtestcard1 randomtestcard2 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM
-
-
-#################### unit test compile ##################
+	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM
 
 test_result:
 	$(info --------------------------------------------------------------)
@@ -75,26 +72,6 @@ result:
 	make test_result > unittestresult.out
 
 
-#################### random test compile ##################
 
-adven_test:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 RandomTests/randomtestadventurer.c -o randomtestadventurer -lm -g
-	./randomtestadventurer 42
-	gcov -f -b randomtestadventurer.c 
-
-card1_test:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 RandomTests/randomtestcard1.c -o randomtestcard1 -lm -g
-	./randomtestcard1 42
-	gcov -f -b randomtestcard1.c 
-
-
-card2_test:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 RandomTests/randomtestcard2.c -o randomtestcard2 -lm -g
-	./randomtestcard2 42
-	gcov -f -b randomtestcard2.c 
-
-random_result:
-	make adven_test > randomtestadventurer.out
-	#cat dominion.c.gcov >> randomtestadventurer.out
-	make card1_test > randomtestcard1.out
-	make card2_test > randomtestcard2.out
+random_test1:
+	gcc -fprofile-arcs -ftest-coverage RandomTests/randomtestadventurer.c -o randomtestadventurer -lm -g

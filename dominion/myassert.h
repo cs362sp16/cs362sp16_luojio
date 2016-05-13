@@ -9,9 +9,10 @@ void check_functions(int func){
 	}
 }
 
-void check_equal(int a, int b){
+int check_equal(int a, int b){
 	if(a != b){
 		printf("TEST FAILED: Parameters not equal\n\n");
 		exit(0);
 	}
 }
+
