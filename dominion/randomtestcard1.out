@@ -87,10 +87,10 @@ Taken at least once:50.00% of 6
 No calls
 
 Function 'cardEffect'
-Lines executed:8.96% of 201
+Lines executed:9.45% of 201
 Branches executed:16.76% of 173
-Taken at least once:3.47% of 173
-Calls executed:10.91% of 55
+Taken at least once:4.62% of 173
+Calls executed:12.73% of 55
 
 Function 'card_village'
 Lines executed:100.00% of 5
@@ -128,10 +128,10 @@ Taken at least once:0.00% of 28
 No calls
 
 Function 'drawCard'
-Lines executed:95.45% of 22
-Branches executed:100.00% of 6
-Taken at least once:83.33% of 6
-Calls executed:100.00% of 1
+Lines executed:36.36% of 22
+Branches executed:33.33% of 6
+Taken at least once:16.67% of 6
+Calls executed:0.00% of 1
 
 Function 'getWinners'
 Lines executed:0.00% of 24
@@ -146,9 +146,9 @@ Taken at least once:0.00% of 42
 Calls executed:0.00% of 3
 
 Function 'isGameOver'
-Lines executed:0.00% of 10
-Branches executed:0.00% of 8
-Taken at least once:0.00% of 8
+Lines executed:80.00% of 10
+Branches executed:100.00% of 8
+Taken at least once:75.00% of 8
 No calls
 
 Function 'endTurn'
@@ -218,9 +218,9 @@ No branches
 No calls
 
 Function 'compare'
-Lines executed:100.00% of 6
+Lines executed:83.33% of 6
 Branches executed:100.00% of 4
-Taken at least once:100.00% of 4
+Taken at least once:75.00% of 4
 No calls
 
 File 'RandomTests/randomtestcard1.c'
@@ -245,9 +245,9 @@ Calls executed:18.75% of 16
 Creating 'rngs.c.gcov'
 
 File 'dominion.c'
-Lines executed:28.90% of 557
-Branches executed:27.58% of 417
-Taken at least once:18.71% of 417
+Lines executed:28.01% of 557
+Branches executed:28.54% of 417
+Taken at least once:19.42% of 417
 Calls executed:19.15% of 94
 Creating 'dominion.c.gcov'
 

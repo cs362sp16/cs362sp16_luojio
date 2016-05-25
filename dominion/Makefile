@@ -18,7 +18,7 @@ player: player.c interface.o
 all: playdom player
 
 clean:
-	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 randomtestadventurer randomtestcard1 randomtestcard2 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM
+	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 randomtestadventurer randomtestcard1 randomtestcard2 testdominion player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM
 
 
 #################### unit test compile ##################
@@ -98,3 +98,21 @@ random_result:
 	#cat dominion.c.gcov >> randomtestadventurer.out
 	make card1_test > randomtestcard1.out
 	make card2_test > randomtestcard2.out
+
+
+
+###################  dominiontester(HW4) ######################
+tester:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 testdominion.c -o testdominion -lm -g
+	./testdominion 42
+	
+
+tester_result:
+	make tester
+	gcov -f -b testdominion.c > testdominion.ou
+	
+testdominion:
+	gcc -std=c99 testdominion.c -o testdominion -lm -g
+
+cleantest:
+	rm -r -f temp1 temp2 diff1.out diff2.out

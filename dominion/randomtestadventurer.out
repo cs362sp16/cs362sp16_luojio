@@ -63,9 +63,9 @@ Taken at least once:100.00% of 4
 Calls executed:100.00% of 2
 
 Function 'Random'
-Lines executed:87.50% of 8
+Lines executed:100.00% of 8
 Branches executed:100.00% of 2
-Taken at least once:50.00% of 2
+Taken at least once:100.00% of 2
 No calls
 
 Function 'updateCoins'
@@ -87,7 +87,7 @@ Taken at least once:50.00% of 6
 No calls
 
 Function 'cardEffect'
-Lines executed:12.44% of 201
+Lines executed:11.94% of 201
 Branches executed:19.08% of 173
 Taken at least once:5.78% of 173
 Calls executed:12.73% of 55
@@ -118,7 +118,7 @@ Calls executed:100.00% of 3
 Function 'card_adventurer'
 Lines executed:93.33% of 15
 Branches executed:100.00% of 12
-Taken at least once:75.00% of 12
+Taken at least once:66.67% of 12
 Calls executed:50.00% of 2
 
 Function 'getCost'
@@ -202,9 +202,9 @@ Taken at least once:87.50% of 8
 Calls executed:100.00% of 2
 
 Function 'initializeGame'
-Lines executed:83.61% of 61
-Branches executed:95.65% of 46
-Taken at least once:78.26% of 46
+Lines executed:85.25% of 61
+Branches executed:100.00% of 46
+Taken at least once:80.43% of 46
 Calls executed:100.00% of 4
 
 Function 'kingdomCards'
@@ -238,15 +238,15 @@ Calls executed:50.00% of 4
 Creating 'myassert.h.gcov'
 
 File 'rngs.c'
-Lines executed:55.74% of 61
+Lines executed:57.38% of 61
 Branches executed:50.00% of 32
-Taken at least once:34.38% of 32
+Taken at least once:37.50% of 32
 Calls executed:18.75% of 16
 Creating 'rngs.c.gcov'
 
 File 'dominion.c'
 Lines executed:29.08% of 557
-Branches executed:37.65% of 417
+Branches executed:38.13% of 417
 Taken at least once:20.38% of 417
 Calls executed:19.15% of 94
 Creating 'dominion.c.gcov'
