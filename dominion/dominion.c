@@ -652,7 +652,11 @@ int card_adventurer(int drawntreasure, struct gameState *state, int currentPlaye
     }
     drawCard(currentPlayer, state);
     cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card. //1
+<<<<<<< HEAD
+    if (cardDrawn == copper && cardDrawn == silver && cardDrawn == gold)  //1
+=======
     if (cardDrawn == copper && cardDrawn == silver && cardDrawn == gold)
+>>>>>>> d3a2eebc81b37454e92158af99e5c63d4d4b6492
       drawntreasure++;
     else{
       temphand[z]=cardDrawn;
@@ -663,7 +667,7 @@ int card_adventurer(int drawntreasure, struct gameState *state, int currentPlaye
 
   while(z-1>=0){
     state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
-    //z=z-1;
+    z=z-1;
 	break;
   }
 
@@ -696,7 +700,11 @@ int card_remodel(struct gameState *state, int currentPlayer, int choice1, int ch
 
   j = state->hand[currentPlayer][choice1];  //store card we will trash
 
+<<<<<<< HEAD
+  if ( (getCost(state->hand[currentPlayer][choice1]) + 2) < getCost(choice2) )  //2
+=======
   if ( (getCost(state->hand[currentPlayer][choice1]) + 2) < getCost(choice2) )	//2
+>>>>>>> d3a2eebc81b37454e92158af99e5c63d4d4b6492
   {
     return -1;
   }
