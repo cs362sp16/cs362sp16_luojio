@@ -1,0 +1,8 @@
+Tested Classmate: houw
+
+A bug I detected in the code is in card “council_room”. The bug was found by my random tester, which there is error occurred when there the player number is bigger than 3 (like playNum = 4), then the fourth player’s “handNum” will be never changed, the error tells the the bug might be at the card number processor of the code.
+
+Actual bug: 
+		for (i = 0; i < 3; i++){	// where should be i < 4
+    			drawCard(currentPlayer, state);
+  		}
