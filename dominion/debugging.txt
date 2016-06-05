@@ -1,0 +1,52 @@
+*** Introduction of the debugging process:
+	- I choose to debug my "card_adventurer" function in the dominion.c file
+	- I used random tester for identifying the bug.
+	- I choose to use the unit tester to find out the specific bug of my code.
+
+
+*** Partial logs and explanation of my debugging process:
+	1. Card "adventurer" has effects on three different variables those are "handCount",
+	"discardCount" and "drawntreasure". And my tester repectively tests these three outputs,
+	and the result indicates the "drawntreasure" doesn't match the correct output.
+
+	2. Since the bug occurred in drawntreasure, which can be located in this scope:
+
+	while(drawntreasure<2){
+		if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
+			shuffle(currentPlayer, state);
+		}
+		drawCard(currentPlayer, state);
+		cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card. //1
+		if (cardDrawn == copper && cardDrawn == silver && cardDrawn == gold)
+			drawntreasure++;
+		else{
+			temphand[z]=cardDrawn;
+			state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
+			z++;
+		}
+	}
+
+
+	3. I started use the unit tester to find out where and what the paticular bugs are in the function:
+		1. I initialized a game state that makes everything be allowed to processed within the function
+		2. I set the "drawntreasure<2" that makes going into the whlie loop
+		3. I commented out the "drawCard" function and I set a specific card as "copper"
+		4. Run my tester again, that showed the value of "drawntreasure" has not been changed
+		5. error came up: "cardDrawn == copper && cardDrawn == silver && cardDrawn == gold", since there is only one call 
+			from function "drawCard", the logic of the if statement is incorrect which takes three camparisons
+		6. Changed to the correct version as "cardDrawn == copper || cardDrawn == silver || cardDrawn == gold"
+		7. Rab my random tester again and everthing were correct
+
+ 
+*** Applied Agan's principles to my process:
+	1. Understand the system:
+		This principle was applied in my whole debugging process. Since I can clearly know about how the card effect works, 
+		I can easily predict the outputs by taking specific inputs to the functions, then I can see where the bug might happen
+		by seeing which outputs seems incorrect.
+	2. Change one thing at a time
+		This principle was applied in identifying the bug (random tester), since I don't know whether there is any bugs or where the bugs are,
+		my random tester basically changed one thing each time to check if the outputs seems are correct to the inputs
+	3. Get a fresh view 
+		Since this function has few codes to read, after better localizing where the bugs might be in the scope, I can used fresh view to
+		find if there are any obvious syntax or logical errors.
+	
