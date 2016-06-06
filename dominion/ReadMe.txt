@@ -1,4 +1,7 @@
 
-*************** FOR ASSIGNMENT4:
+*************** FOR FINAL PROJECT:
 
-1. New files are: testdominion.c, diffdominion.sh and diff.txt
+This directory (dominion) consists:
+  - debugging.txt (for part.2)
+  - mutation.txt (for part.3)
+  - testreport.pdf (for part.4)
