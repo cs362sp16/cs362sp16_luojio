@@ -1,0 +1,53 @@
+
+*** Prepation for Mutation Test (dominion.c):
+	In this mutation test, I chose to test the code of card "adventurer", "smithy" and "steward", I manually created
+3 mutants for each of the three functions. In each mutant, I manually made a syntax change based on the orignal codes. 
+Then I used random test to test both the origin version and the mutant version. Finally, I compared the results from 
+both files, see if they have the same output results, that means that this mutant can be killed, otherwise if the 
+original program and mutant program generate different output, the mutant can be kept.
+
+
+*** Mutation Test Result:
+	- Result of card "adventurer"
+	 	My first mutant makes "if (state->deckCount[currentPlayer] <= 1)" where the original code was "< 1", 
+	based on my random test, the result of this mutant showed "segmentation fault", which as same as the output 
+	result from the original function, therefore, this mutant can be ignored and killed.
+		My Second mutant makes "cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]];" where
+	the original code was "...[state->handCount[currentPlayer]-1]", the result of this mutant showed "segmentation 
+	fault", which as same as the output result from the original function, therefore, this mutant can be ignored 
+	and killed.
+ 		My third mutant makes "if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)" where the 
+	the original code was using logic "&&" istead or "||", this program was compiled successfully which indicates
+	the statement might caused the error and this mutant could be kept.
+	
+	- result of card "smithy"
+		My first mutant makes "for (i = 0; i < 7; i++)" where the original code was "i < 5", the output result 
+	of this mutant showed "handCount Failed: parameters not equal" which as same as the output result from the 
+	original function, therefore, this mutant can be ignored and killed.
+		My second mutant comments out function "discardCard(handPos, currentPlayer, state, 0)" and the output
+	of this mutant showed two "Failed: parameters not equal" messages, one was for the variable "handCount" and the
+	other was "deckCount", since the error of "handCount" was still existing (as same as original function), so I
+	couldn't determine that "deckCount" was caused by my second mutant or the first error. Therefore, this mutant 
+	need to be kept for further testing.
+		My third mutant makes "for (i = 0; i < 3; i++)" where the original code was "i < 5", the output result 
+	of this mutant showed "TEST PASSED", which indicated that the error was in this senetence, and the mutation test
+	was successfully completed for this function.
+
+	- result of card "steward"
+		The output results of all three mutants showed differences from the original file, which means all three
+	mutants can be kept and there is no conclusion for this function so far. Therefore, more mutants would be needed 
+	until every part of the function was covered.
+
+
+
+*** Conclusion based on Mutation Test:
+Advantages of mutaion test:
+	It is a powerful test method to attain high coverage of the source program and it's capable comprehensively
+testing the mutant program. Mutation testing brings a good level of error detection to the software developer, and it 
+uncovers ambiguities in the source code, and has the capacity to  detect all the errors in the program.
+
+Disadvantages of mutaion test:
+	Mutation testing is extremely costly and time consuming since there are many mutant programs that need to be 
+generated. Since its time consuming, we can say that this testing cannot be done without an automation tool. And each 
+mutation will have the same number of test cases than that of the original program, So a large number of mutant programs 
+may need to be tested against the original test suite.

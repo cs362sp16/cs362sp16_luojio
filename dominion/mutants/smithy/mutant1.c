@@ -722,13 +722,13 @@ int card_smithy(struct gameState *state, int handPos, int currentPlayer){
   int i;
 
   //+3 Cards
-  for (i = 0; i < 5; i++)     //2 (i<3)
+  for (i = 0; i < 7; i++)     //2 (i<3)
   {
     drawCard(currentPlayer, state);
   }
 
   //discard card from hand
-  discardCard(handPos, currentPlayer, state, 0);
+  discardCard(handPos, currentPlayer, state, 5);
   return 0;
 }
 int card_village(struct gameState *state, int handPos, int currentPlayer){

@@ -993,7 +993,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       else if (choice1 == 2)
 	{
 	  //+2 coins
-	  state->coins = state->coins + 2;
+	  state->coins = state->coins - 2;
 	}
       else
 	{

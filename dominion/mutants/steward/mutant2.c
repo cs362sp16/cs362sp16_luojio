@@ -998,8 +998,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       else
 	{
 	  //trash 2 cards in hand
-	  discardCard(choice2, currentPlayer, state, 1);
-	  discardCard(choice3, currentPlayer, state, 1);
+	  discardCard(choice2, currentPlayer, state, 10);
+	  discardCard(choice3, currentPlayer, state, 10);
 	}
 			
       //discard card from hand

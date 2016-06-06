@@ -2,7 +2,7 @@
 #include "../rngs.c"
 #include "../myassert.h"
 
-#define TEST_LOOP 1
+#define TEST_LOOP 100
 
 void checker(struct gameState*, int);
 
@@ -55,23 +55,16 @@ int main(int argc, char* argv[]){
 
 
 void checker(struct gameState *state, int player){
-	int temp1, temp2, result1, result2, result3;
+	int temp1, temp2, temp3, temp4, result;
 
 	temp1 = state->handCount[player];
-	temp2 = state->deckCount[player];
+	temp3 = state->deckCount[player];
 
 	check_functions(cardEffect(smithy, 0, 0, 0, state, 0, 0));
 
-	result1 = state->handCount[player];
+	temp2 = state->handCount[player];
+	temp4 = state->deckCount[player];
 
-	result2 = state->deckCount[player];
-
-	printf("Test for handCount:");
-	check_equal(result1, temp1+3-1);
-
-	printf("Test for deckCount:");
-	if(temp2-result2 >= 3)
-		printf("PASSED\n");
-	else
-		printf("FAILED\n");
+	//printf("check correct handcount...\n");
+	check_equal(temp1, temp2-3+1);
 }

@@ -71,7 +71,7 @@ test_result:
 	gcov cardtest4.c
 	rm a.out
 
-result:
+unit_result:
 	make test_result > unittestresult.out
 
 

@@ -722,7 +722,7 @@ int card_smithy(struct gameState *state, int handPos, int currentPlayer){
   int i;
 
   //+3 Cards
-  for (i = 0; i < 5; i++)     //2 (i<3)
+  for (i = 0; i < 3; i++)     //2 (i<3)
   {
     drawCard(currentPlayer, state);
   }

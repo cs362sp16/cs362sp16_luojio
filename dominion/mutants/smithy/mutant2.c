@@ -728,7 +728,7 @@ int card_smithy(struct gameState *state, int handPos, int currentPlayer){
   }
 
   //discard card from hand
-  discardCard(handPos, currentPlayer, state, 0);
+  //discardCard(handPos, currentPlayer, state, 0);
   return 0;
 }
 int card_village(struct gameState *state, int handPos, int currentPlayer){
