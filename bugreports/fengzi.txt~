@@ -1,0 +1,9 @@
+Tested Classmate: fengzi
+
+A bug I found of the code is in the card “smith”. And the bug was found by both my random and unit tester. The bug occurred in the “Numhand”(number of hand in current player) in my tester, which the output result of the Numhand doesn’t match the correct function output (Numhand doesn’t equal to original Numhand + 3).
+
+Actual error:
+	for (i = 0; i < 4; i++)   // should be i < 3 (+3 cards in original function)
+  	{
+    		drawCard(currentPlayer, state);
+  	} 
