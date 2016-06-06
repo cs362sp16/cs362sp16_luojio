@@ -1,8 +1,0 @@
-Tested Classmate: jiangzh
-
-A bug I found in the code is in the card “village”. And the bug was found by both of my random and unit 
-tester, where the “numActions” doesn’t seem correct after processing the function, a correct “numActions” 
-output of the function should have original numAction+3, but the result in this code is not correct.
-
-Actual error:
-	state->numActions = state->numActions + 2;	// should be state->numActions + 3
